@@ -94,14 +94,14 @@ RvTopViewToolBar::build()
     b = dynamic_cast<QToolButton*>(widgetForAction(m_viewBackAction));
     b->setIcon(QIcon(":/images/view_back.png"));
     b->setProperty("tbstyle", QVariant(QString("view_menu")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     b->setToolTip("Switch to previous View");
 
     m_viewForwardAction = addAction("");
     b = dynamic_cast<QToolButton*>(widgetForAction(m_viewForwardAction));
     b->setIcon(QIcon(":/images/view_forwd.png"));
     b->setProperty("tbstyle", QVariant(QString("view_menu")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     b->setToolTip("Switch to next View");
 
     connect(m_viewBackAction, SIGNAL(triggered(bool)), this, SLOT(previousViewNode()));

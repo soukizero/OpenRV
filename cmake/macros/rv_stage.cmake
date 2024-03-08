@@ -417,7 +417,8 @@ FUNCTION(rv_stage)
       SET_DIRECTORY_PROPERTIES(PROPERTIES CMAKE_CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${_package_file})
 
       EXECUTE_PROCESS(
-        COMMAND bash -c "cat ${_package_file} | grep version: | grep --only-matching -e '[0-9.]*'"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMAND cmd /c "cat ${_package_file} | grep version: | grep --only-matching -e '[0-9.]*'"
         RESULT_VARIABLE _result
         OUTPUT_VARIABLE _pkg_version
         OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY

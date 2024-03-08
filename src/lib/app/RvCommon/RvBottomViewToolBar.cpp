@@ -167,7 +167,7 @@ RvBottomViewToolBar::build()
     b->setIcon(QIcon(":/images/control_bstep.png"));
     b->setToolTip("Step back one frame");
     b->setProperty("tbstyle", QVariant(QString("left")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     m_backStepAction = a;
 
     a = addAction("");
@@ -175,7 +175,7 @@ RvBottomViewToolBar::build()
     b->setIcon(QIcon(":/images/control_fstep.png"));
     b->setToolTip("Step forward one frame");
     b->setProperty("tbstyle", QVariant(QString("right")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     m_forwardStepAction = a;
 
     a = addAction("");
@@ -201,7 +201,7 @@ RvBottomViewToolBar::build()
     b->setIcon(QIcon(":/images/control_bmark.png"));
     b->setToolTip("Skip to start of sequence");
     b->setProperty("tbstyle", QVariant(QString("left")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     m_backMarkAction = a;
 
     a = addAction("");
@@ -209,7 +209,7 @@ RvBottomViewToolBar::build()
     b->setIcon(QIcon(":/images/control_fmark.png"));
     b->setToolTip("Skip to end of sequence");
     b->setProperty("tbstyle", QVariant(QString("right")));
-    b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    b->setToolButtonStyle(Qt::ToolButtonIconOnly);
     m_forwardMarkAction = a;
 
     connect(m_backStepAction, SIGNAL(triggered()), this, SLOT(backStepTriggered()));
@@ -294,7 +294,7 @@ RvBottomViewToolBar::build()
     QWidgetAction* wa = new QWidgetAction(b);
     setVolumeLevel<QWidgetAction>(*wa, volumeLevel);
     m_audioSlider = new QSlider(b);
-    m_audioSlider->setProperty("sliderStyle", QVariant(QString("menu")));
+    // m_audioSlider->setProperty("sliderStyle", QVariant(QString("menu")));
     m_audioSlider->setTickInterval(10);
     wa->setDefaultWidget(m_audioSlider);
     m->addAction(wa);
