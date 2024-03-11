@@ -49,7 +49,7 @@ INCLUDE(qt5)
 INCLUDE(openssl) # Python3 requirement
 INCLUDE(python3)
 INCLUDE(boost)
-INCLUDE(dav1d)
+# INCLUDE(dav1d)
 IF(RV_TARGET_WINDOWS)
   INCLUDE(atomic_ops)
 ENDIF()

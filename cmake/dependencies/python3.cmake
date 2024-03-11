@@ -25,7 +25,7 @@ SET(PYTHON_VERSION_MINOR
 )
 
 SET(PYTHON_VERSION_PATCH
-    13
+    12
 )
 
 SET(_python3_version
@@ -44,14 +44,14 @@ SET(_opentimelineio_version
 )
 
 SET(_pyside2_version
-    "5.15.10"
+    "5.15.13"
 )
 
 SET(_python3_download_url
     "https://github.com/python/cpython/archive/refs/tags/v${_python3_version}.zip"
 )
 SET(_python3_download_hash
-    "21b32503f31386b37f0c42172dfe5637"
+    "69de50b7f8e90167932f677390e0490f"
 )
 
 SET(_opentimelineio_download_url
@@ -65,7 +65,7 @@ SET(_pyside2_archive_url
     "https://mirrors.ocf.berkeley.edu/qt/official_releases/QtForPython/pyside2/PySide2-${_pyside2_version}-src/pyside-setup-opensource-src-${_pyside2_version}.zip"
 )
 SET(_pyside2_download_hash
-    "87841aaced763b6b52e9b549e31a493f"
+    "935e9e1684ced500817f5c2db8503b7b"
 )
 
 SET(_install_dir
